@@ -99,6 +99,19 @@ const icons = [
 
 console.log(icons);
 
+icons.forEach((element) => {
+    const {name,prefix,family} = element;
+
+    const elementHTML = `
+    <div class="col-2 border border-secondary altezza d-flex align-items-center justify-content-center me-3" id="stampa">
+        <i class="${family} ${prefix} ${name}"></i>
+    </div> 
+   
+    `;
+    document.getElementById("stampa").innerHTML += elementHTML;
+
+});
+
 
 
 
