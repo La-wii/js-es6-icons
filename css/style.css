@@ -1,4 +1,43 @@
-.altezza{
-    background-color: lightgray;
-    height: 100px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+.container{
+    background-color: lightpink;
+    width: 95%;
+    height: calc(100vh - 140px);
+    margin: auto;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.header-top{
+    height: 70px;
+}
+
+h1{
+    color: #29b1dd;
+    font-weight: 700;
+    font-style: oblique;
+    padding: 10px 20px;
+}
+
+.header-bottom{
+    background-color: #29b1dd;
+    height: 70px;
+}
+
+.header-bottom-content{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.select-margin{
+    margin-left: 20px;
+}
+
