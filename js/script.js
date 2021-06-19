@@ -157,7 +157,10 @@ selection.addEventListener("change", function(){
 
     print(filteredSelection);
 
-    
+    if(valueSelection == 'All'){
+        print(coloredIcons);
+    }
+
 });
 
 
