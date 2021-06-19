@@ -99,6 +99,21 @@ const icons = [
 
 // print(icons);
 
+// stampo icone + applico metodo .toUppercase con ciclo forEach (successivamente creata funzione print)
+
+// icons.forEach((element) => {
+    
+//     const {name,prefix,family} = element;
+
+//     const elementHTML = `
+//     <div class="card flex">
+//         <i class="${family} ${prefix}${name}"></i>
+//         <div>${name.toUpperCase()}</div>
+//     </div>
+//     `
+//     document.getElementById("container-cards").innerHTML += elementHTML;
+// });
+
 const coloredIcons = icons.map((element) => {
     let color = 'red';
     if (element.type == 'animal'){
@@ -116,20 +131,23 @@ const coloredIcons = icons.map((element) => {
 print(coloredIcons);
 console.log(coloredIcons);
 
-// stampo icone + applico metodo .toUppercase con ciclo forEach (successivamente creata funzione print)
+// aggiunte altre option in selectione element.type
+const typesDivision = [];
 
-// icons.forEach((element) => {
+coloredIcons.forEach((element) => {
+    if (!typesDivision.includes(element.type)){
+        typesDivision.push(element.type)
+        document.getElementById("icon-select").innerHTML +=
+        `
+        <option value="${element.type}">${element.type}</option>    
+        `
+    }
     
-//     const {name,prefix,family} = element;
+    
+});
 
-//     const elementHTML = `
-//     <div class="card flex">
-//         <i class="${family} ${prefix}${name}"></i>
-//         <div>${name.toUpperCase()}</div>
-//     </div>
-//     `
-//     document.getElementById("container-cards").innerHTML += elementHTML;
-// });
+console.log(typesDivision);
+
 
 
 
@@ -152,6 +170,8 @@ function print (array){
     });
 
 }
+
+
 
 
 
