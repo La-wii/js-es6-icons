@@ -97,15 +97,43 @@ const icons = [
     },
 ];
 
-icons.forEach((element) => {
-    
-    const {name,prefix,family} = element;
+print(icons);
 
-    const elementHTML = `
-    <div class="card flex">
-        <i class="${family} ${prefix}${name}"></i>
-        <div>${name.toUpperCase()}</div>
-    </div>
-    `
-    document.getElementById("container-cards").innerHTML += elementHTML;
-});
+// stampo icone + applico metodo .toUppercase con ciclo forEach
+// icons.forEach((element) => {
+    
+//     const {name,prefix,family} = element;
+
+//     const elementHTML = `
+//     <div class="card flex">
+//         <i class="${family} ${prefix}${name}"></i>
+//         <div>${name.toUpperCase()}</div>
+//     </div>
+//     `
+//     document.getElementById("container-cards").innerHTML += elementHTML;
+// });
+
+
+function print (array){
+
+    array.forEach((element) => {
+    
+        const {name,prefix,family} = element;
+    
+        const elementHTML = `
+        <div class="card flex">
+            <i class="${family} ${prefix}${name}"></i>
+            <div>${name.toUpperCase()}</div>
+        </div>
+        `
+        document.getElementById("container-cards").innerHTML += elementHTML;
+    });
+
+}
+
+
+
+
+
+
+
