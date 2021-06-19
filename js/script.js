@@ -97,9 +97,27 @@ const icons = [
     },
 ];
 
-print(icons);
+// print(icons);
 
-// stampo icone + applico metodo .toUppercase con ciclo forEach
+const coloredIcons = icons.map((element) => {
+    let color = 'red';
+    if (element.type == 'animal'){
+        color = 'blue';
+    } else if (element.type == 'vegetable'){
+        color = 'green';
+    }
+
+    return {
+        ...element,
+        color
+    }
+});
+
+print(coloredIcons);
+console.log(coloredIcons);
+
+// stampo icone + applico metodo .toUppercase con ciclo forEach (successivamente creata funzione print)
+
 // icons.forEach((element) => {
     
 //     const {name,prefix,family} = element;
@@ -114,15 +132,19 @@ print(icons);
 // });
 
 
+
+
+// ---------------------------- FUNZIONI ----------------------------------------------
+
 function print (array){
 
     array.forEach((element) => {
     
-        const {name,prefix,family} = element;
+        const {name,prefix,family,color} = element;
     
         const elementHTML = `
         <div class="card flex">
-            <i class="${family} ${prefix}${name}"></i>
+            <i class="${family} ${prefix}${name}" style="color:${color}"></i>
             <div>${name.toUpperCase()}</div>
         </div>
         `
