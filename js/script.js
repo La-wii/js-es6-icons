@@ -129,7 +129,7 @@ const coloredIcons = icons.map((element) => {
 });
 
 print(coloredIcons);
-console.log(coloredIcons);
+// console.log(coloredIcons);
 
 // aggiunte altre option in selectione element.type
 const typesDivision = [];
@@ -146,15 +146,28 @@ coloredIcons.forEach((element) => {
     
 });
 
-console.log(typesDivision);
+const selection = document.getElementById("icon-select");
 
+selection.addEventListener("change", function(){
+    const valueSelection = selection.value;
+    console.log(valueSelection);
+    const filteredSelection = coloredIcons.filter((element) =>{
+        return element.type == valueSelection;
+    });
 
+    print(filteredSelection);
+
+    
+});
 
 
 
 // ---------------------------- FUNZIONI ----------------------------------------------
 
-function print (array){
+function print(array){
+
+    document.getElementById("container-cards").innerHTML = '';
+    
 
     array.forEach((element) => {
     
